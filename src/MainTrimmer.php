@@ -11,31 +11,31 @@ class MainTrimmer
 {
     /**
      * @param  string|null  $value
-     * @param  string       $mask
+     * @param  string       $characters
      * @return string|null
      */
-    public function trim(?string $value, string $mask = "\040\t\n\r\0\x0B"): ?string
+    public function trim(?string $value, string $characters = "\040\t\n\r\0\x0B"): ?string
     {
-        return is_null($value) ? null : trim($value, $mask);
+        return is_null($value) ? null : trim($value, $characters);
     }
 
     /**
      * @param  string|null  $value
-     * @param  string       $mask
+     * @param  string       $characters
      * @return string|null
      */
-    public function ltrim(?string $value, string $mask = "\040\t\n\r\0\x0B"): ?string
+    public function ltrim(?string $value, string $characters = "\040\t\n\r\0\x0B"): ?string
     {
-        return is_null($value) ? null : ltrim($value, $mask);
+        return is_null($value) ? null : ltrim($value, $characters);
     }
 
     /**
      * @param  string|null  $value
-     * @param  string       $mask
+     * @param  string       $characters
      * @return string|null
      */
-    public function rtrim(?string $value, string $mask = "\040\t\n\r\0\x0B"): ?string
+    public function rtrim(?string $value, string $characters = "\040\t\n\r\0\x0B"): ?string
     {
-        return is_null($value) ? null : rtrim($value, $mask);
+        return is_null($value) ? null : rtrim($value, $characters);
     }
 }
