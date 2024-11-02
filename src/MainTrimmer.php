@@ -14,7 +14,7 @@ class MainTrimmer
      * @param  string       $characters
      * @return string|null
      */
-    public function trim(?string $value, string $characters = "\040\t\n\r\0\x0B"): ?string
+    public function trim(?string $value, string $characters = "\x00\x09\x0A\x0B\x0D\x20"): ?string
     {
         return is_null($value) ? null : trim($value, $characters);
     }
