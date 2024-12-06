@@ -35,7 +35,7 @@ class Trimmer
      */
     public function __call(string $name, array $arguments): ?string
     {
-        return call_user_func_array([$this->trimmer, $name], $arguments);
+        return $this->trimmer->$name(...$arguments);
     }
 
     /**
@@ -45,7 +45,7 @@ class Trimmer
      */
     public static function __callStatic(string $name, array $arguments): ?string
     {
-        return call_user_func_array([self::getInstance(), $name], $arguments);
+        return self::getInstance()->$name(...$arguments);
     }
 
     /**
